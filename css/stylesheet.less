@@ -1,0 +1,168 @@
+// BEGIN CONFIGURATION
+// Write here your values for body copy and headers (in pixels).
+
+@font-size: 16;
+@h1-px    : 26;
+@h2-px    : 24;
+@h3-px    : 22;
+@h4-px    : 20;
+@h5-px    : 20;
+
+// END CONFIGURATION
+
+body {
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+}
+
+/**************/
+/* Typography */
+/**************/
+
+// Variables
+@em: @font-size * 1em;
+@magicNumber: @font-size * 1.5;
+
+@h1-size: (@h1-px/@em);
+@h2-size: (@h2-px/@em);
+@h3-size: (@h3-px/@em);
+@h4-size: (@h4-px/@em);
+@h5-size: (@h5-px/@em);
+
+@h1-height: (@magicNumber / @h1-px)*1em;
+@h2-height: (@magicNumber / @h2-px)*1em;
+@h3-height: (@magicNumber / @h3-px)*1em;
+@h4-height: (@magicNumber / @h4-px)*1em;
+@h5-height: (@magicNumber / @h5-px)*1em;
+
+body {
+    font-family: Cambria, Helvetica, sans-serif;
+    font-size: (@font-size / 16) * 1em;
+}
+
+.gigantic {
+    font-size: (@h1-size * 3)*1em;
+    line-height: @h1-height;
+    margin-bottom: @h1-height;
+}
+
+.small {
+    font-size: 13/@em;
+    line-height: ((13*1.5) / 13) * 1em;
+    margin-bottom: ((13*1.5) / 13) * 1em;
+}
+
+.big1, h1 {
+    font-size: @h1-size;
+    line-height: @h1-height;
+    margin-bottom: @h1-height;
+}
+
+.big2, h2 {
+    font-size: @h2-size;
+    line-height: @h2-height;
+    margin-bottom: @h2-height;
+}
+
+.big3, h3 {
+    font-size: @h3-size;
+    line-height: @h3-height;
+    margin-bottom: @h3-height;
+}
+
+.big4, h4 {
+    font-size: @h4-size;
+    line-height: @h4-height;
+    margin-bottom: @h4-height;
+}
+
+.big5, h5 {
+    font-size: @h5-size;
+    line-height: @h5-height;
+    margin-bottom: @h5-height;
+}
+
+p, ul, ol {
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+}
+
+/********/
+/* Page */
+/********/
+
+.page {
+    max-width: 61em;
+    margin: .8em auto;
+}
+
+.row {
+    margin-bottom: 1.4em;
+    overflow: hidden;
+}
+
+/********/
+/* Grid */
+/********/
+
+.one, .two, .three, .four, .five, .six, .seven, .eight,
+.nine, .ten, .eleven, .twelve {
+    padding: 0 1%;
+}
+
+.one    { width: 8.33%; }
+.two    { width: 16.66%; }
+.three  { width: 25%; }
+.four   { width: 33.3%; }
+.five   { width: 41.66% }
+.six    { width: 50%; }
+.seven  { width: 58.33% }
+.eight  { width: 66.6%; }
+.nine   { width: 75%; }
+.ten    { width: 83.33%; }
+.eleven { width: 91.66%; }
+.twelve { width: 100%; }
+
+.column {
+    float: left;
+}
+
+.wrapper, .column {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.wrapper {
+    padding: 0 1%;
+}
+
+/*****************/
+/* Media Queries */
+/*****************/
+
+//  Tablet Layout: 768px.
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .page {
+        max-width: 43em;
+    }
+}
+
+//  Mobile Layout: 320px.
+@media only screen and (max-width: 767px) {
+    .page {
+        max-width: 22em;
+    }
+}
+
+//  Wide Mobile Layout: 480px.
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .page {
+        max-width: 30em;
+    }
+}
