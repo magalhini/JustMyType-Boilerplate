@@ -2,11 +2,14 @@
 // Write here your values for body copy and headers (in pixels).
 
 @font-size: 16;
-@h1-px    : 26;
-@h2-px    : 24;
-@h3-px    : 22;
-@h4-px    : 20;
+@h1-px    : 28;
+@h2-px    : 26;
+@h3-px    : 24;
+@h4-px    : 22;
 @h5-px    : 20;
+
+@big      : 32;
+@small    : 13;
 
 // END CONFIGURATION
 
@@ -32,6 +35,7 @@ h1, h2, h3, h4, h5 {
 @h3-size: (@h3-px/@em);
 @h4-size: (@h4-px/@em);
 @h5-size: (@h5-px/@em);
+@big-size: (@big/@em);
 
 @h1-height: (@magicNumber / @h1-px)*1em;
 @h2-height: (@magicNumber / @h2-px)*1em;
@@ -44,10 +48,16 @@ body {
     font-size: (@font-size / 16) * 1em;
 }
 
+.heading {
+    font-size: @big-size;
+    margin-bottom: (@magicNumber / @big) * 1em;
+    line-height: (@magicNumber / @big) * 1em;
+}
+
 .gigantic {
     font-size: (@h1-size * 3)*1em;
     line-height: @h1-height;
-    margin-bottom: @h1-height;
+    margin-bottom: @h1-height / 3;
 }
 
 .small {
@@ -96,8 +106,7 @@ p, ul, ol {
 /********/
 
 .page {
-    max-width: 61em;
-    margin: .8em auto;
+    margin: 1.45em 22.2%;
 }
 
 .row {
@@ -139,6 +148,44 @@ p, ul, ol {
 
 .wrapper {
     padding: 0 1%;
+}
+
+/*** Grid Overlay ***/
+
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.jmt-1 { left: 0; }
+.jmt-2 { left: 11.1%; }
+.jmt-3 { left: 16.6%; }
+.jmt-4 { left: 22.2%; }
+.jmt-5 { left: 27.7%; }
+.jmt-6 { left: 33.3%; }
+.jmt-7 { left: 38.8%; }
+.jmt-8 { left: 44.4%; }
+.jmt-9 { left: 50%; }
+.jmt-10 { left: 55.5%; }
+.jmt-11 { left: 61.1%; }
+.jmt-12 { left: 66.6%; }
+.jmt-13 { left: 72.2%; }
+.jmt-14 { left: 77.7%; }
+.jmt-15 { left: 83.3%; }
+.jmt-16 { left: 88.3%; }
+.jmt-17 { right: 0; }
+
+.jmt-1, .jmt-2, .jmt-3, .jmt-4, .jmt-5, .jmt-6, .jmt-7, .jmt-8, .jmt-9, .jmt-10, .jmt-11, .jmt-12, .jmt-13, .jmt-14, .jmt-15 {
+    height: 1200px;
+    border-color: #333;
+    border-style: solid;
+    border-width: .5em;
+    margin-left: -.3em;
+    opacity: .25;
+    position: absolute;
 }
 
 /*****************/
