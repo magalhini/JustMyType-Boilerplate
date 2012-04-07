@@ -5,6 +5,7 @@
 * Version: 0.2
 */
 
+/* Creates the overlay grid */
 function showGrid (cols) {
 
 	var $body = $(document.body),
@@ -20,16 +21,21 @@ function showGrid (cols) {
 				'z-index' : '99'
 			});
 
-	createPanel().appendTo($body);
-	createGrids(nrOfCols);
+	createPanel().appendTo($body);  // Creates the control panel and adds it to the DOM
+	createGrids(nrOfCols); 			// Adds the grid rows to the panel
+	addEvents();					// Listens for clicks on the panel buttons
 
 	function createGrids (cols) {
 		var i = 1,
+			docHeight = $(document).height(),
 			$col = "";
 
 		for ( ; i <= cols; i++) {
-			$col = $('<div class="jmt-'+ i +'"></div>');
-			$col.appendTo($grid);
+			$col = $('<div class="jmt-'+ i +'"></div>')
+				.appendTo($grid)
+				.height(docHeight);
+
+			$grid.css('opacity', 1); //Just so we can animate things a bit :)
 		}
 	}
 
@@ -48,8 +54,31 @@ function showGrid (cols) {
 				'border' : '1px solid #888'
 		});
 
+		// Creating the controls afterwards.
+		$panel.append('<div><a href="#" class="btn-grid">Grid</a><a href="#" class="btn-baseline">Baseline</a></div>');
+
 		return $panel;
-	}	
+	}
+
+	function addEvents() {
+
+		var $gridButton = $panel.find('.btn-grid'),
+			$baselineButton = $panel.find('.btn-baseline'),
+			$baseline = $('.line-height');
+
+		if ($gridButton.length && $baselineButton.length) {
+			
+			$gridButton.on('click', function(e) {
+				e.stopPropagation();
+				$grid.is(':visible') ? $grid.fadeOut() : $grid.fadeIn();
+			});
+
+			$baselineButton.on('click', function(e) {
+				e.stopPropagation();
+				$baseline.is(':visible') ? $baseline.fadeOut() : $baseline.fadeIn();
+			});
+		}
+	}
 }
 
 /* Display a vertical rythm grid to confirm the values */
@@ -77,7 +106,6 @@ function showBaseline (size, line) {
 			rows = ($(document).height() - 25) / unit;
 
 		for (var i = 0; i < rows; i++) {
-
 			var grid = $('<div></div>').css({
 				'height': unit,
 				'width': '100%',
