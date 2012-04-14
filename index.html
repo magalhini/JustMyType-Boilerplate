@@ -6,10 +6,12 @@
 		<meta http-equiv="cleartype" content="on">
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-		<title>Boiler</title>
-		<meta name="description" content="Description">
+		<title>JustMyType 0.4a</title>
+		<meta name="description" content="Typography Boilerplate for a prettier Web">
+		<meta name="author" content="Ricardo Magalhães">
 
 		<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+		<link rel="stylesheet" href="css/styles.css" type="text/css"/>
 		<link rel="stylesheet/less" href="css/stylesheet.less" type="text/css"/>
 
 		<script src="js/libs/less.js" type="text/javascript"></script>
@@ -22,33 +24,13 @@
 	</head>
 
 	<body>
-		<!--
-	<div class="grid">
-		<div class="jmt-1"></div>
-		<div class="jmt-2"></div>
-		<div class="jmt-3"></div>
-		<div class="jmt-4"></div>
-		<div class="jmt-5"></div>
-		<div class="jmt-6"></div>
-		<div class="jmt-7"></div>
-		<div class="jmt-8"></div>
-		<div class="jmt-9"></div>
-		<div class="jmt-10"></div>
-		<div class="jmt-11"></div>
-		<div class="jmt-12"></div>
-		<div class="jmt-13"></div>
-		<div class="jmt-14"></div>
-		<div class="jmt-15"></div>
-		<div class="jmt-16"></div>
-		<div class="jmt-17"></div>
-	</div>-->
 	<div class="page">
 		<div class="row">
 			<div class="wrapper">
 				<h1 class="gigantic">JustMyType</h1>
 				<p class="heading hr">A typography boilerplate</p>
 			</div>
-			<div class="six column"><p><span class="drop">L</span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			<div class="six column"><p><span class="drop-caps">L</span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -72,7 +54,7 @@
 	<script>
 		$(function () {
 			showBaseline(16); // 16 is the font-size you've chosen for the body (in px)
-			showGrid(16);
-		})
+			showGrid(16); // 16 is the number of columns (though only 16 are supported as of now)
+		});
 	</script>
 </html>
