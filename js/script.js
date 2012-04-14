@@ -22,8 +22,8 @@ function showGrid (cols) {
 			});
 
 	createPanel().appendTo($body);  // Creates the control panel and adds it to the DOM
-	createGrids(nrOfCols); 			// Adds the grid rows to the panel
-	addEvents();					// Listens for clicks on the panel buttons
+	createGrids(nrOfCols);          // Adds the grid rows to the panel
+	addEvents();                    // Listens for clicks on the panel buttons
 
 	function createGrids (cols) {
 		var i = 1,
@@ -31,7 +31,7 @@ function showGrid (cols) {
 			$col = "";
 
 		for ( ; i <= cols; i++) {
-			$col = $('<div class="jmt-'+ i +'"></div>')
+			$col = $('<div data-grid="grid' + i + '" class="jmt-'+ i +'"></div>')
 				.appendTo($grid)
 				.height(docHeight);
 
@@ -78,6 +78,7 @@ function showGrid (cols) {
 				$baseline.is(':visible') ? $baseline.fadeOut() : $baseline.fadeIn();
 			});
 		}
+		return false;
 	}
 }
 
