@@ -120,23 +120,3 @@ function showBaseline (size, line) {
 		$('.line-height').css('overflow', "hidden");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

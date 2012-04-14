@@ -53,8 +53,8 @@
 .jmt-16 { left: 88.3%; }
 
 [data-grid^='grid'] {
-	border-color: red!important;
-	border-color: #333;
+    border-color: red!important;
+    border-color: #333;
     border-style: solid;
     border-width: 1.5em;
     margin-left: .5em;
