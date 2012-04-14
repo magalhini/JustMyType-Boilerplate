@@ -1,8 +1,141 @@
-/* Stylesheet for */
+/********/
+/* Page */
+/********/
 
-/* Author: */
-/* Date: */
+.wrapper {
+    padding: 0 1%;
+}
 
-body {
+.page {
+    margin: 2.6em 22.2%;
+}
 
+.row {
+    margin-bottom: 1.4em;
+    clear: both;
+}
+
+/****************/
+/* Grid Overlay */
+/****************/
+
+.grid {
+    opacity: 0;
+}
+
+.panel > div {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.panel .btn-grid, .panel .btn-baseline {
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #333;
+}
+
+.jmt-1 { left: 0; }
+.jmt-2 { left: 11.1%; }
+.jmt-3 { left: 16.6%; }
+.jmt-4 { left: 22.2%; }
+.jmt-5 { left: 27.7%; }
+.jmt-6 { left: 33.3%; }
+.jmt-7 { left: 38.8%; }
+.jmt-8 { left: 44.4%; }
+.jmt-9 { left: 50%; }
+.jmt-10 { left: 55.5%; }
+.jmt-11 { left: 61.1%; }
+.jmt-12 { left: 66.6%; }
+.jmt-13 { left: 72.2%; }
+.jmt-14 { left: 77.7%; }
+.jmt-15 { left: 83.3%; }
+.jmt-16 { left: 88.3%; }
+
+[data-grid^='grid'] {
+	border-color: red!important;
+	border-color: #333;
+    border-style: solid;
+    border-width: 1.5em;
+    margin-left: .5em;
+    opacity: 0.07;
+    position: absolute;
+}
+
+/***************/
+/* Grid System */
+/***************/
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight,
+.nine, .ten, .eleven, .twelve {
+    padding: 0 1%;
+}
+
+.one    { width: 8.33%; }
+.two    { width: 16.66%; }
+.three  { width: 25%; }
+.four   { width: 33.3%; }
+.five   { width: 41.66% }
+.six    { width: 50%; }
+.seven  { width: 58.33% }
+.eight  { width: 66.6%; }
+.nine   { width: 75%; }
+.ten    { width: 83.33%; }
+.eleven { width: 91.66%; }
+.twelve { width: 100%; }
+
+.column {
+    float: left;
+}
+
+/* Font Faces */
+
+@font-face {
+    font-family: 'PTSerifRegular';
+    src: url('../res/fonts/dejavu-serif/PTF55F-webfont.eot');
+    src: url('../res/fonts/dejavu-serif/PTF55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../res/fonts/dejavu-serif/PTF55F-webfont.woff') format('woff'),
+         url('../res/fonts/dejavu-serif/PTF55F-webfont.ttf') format('truetype'),
+         url('../res/fonts/dejavu-serif/PTF55F-webfont.svg#PTSerifRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PTSerifRegular';
+    src: url('../res/fonts/dejavu-serif/PTF56F-webfont.eot');
+    src: url('../res/fonts/dejavu-serif/PTF56F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../res/fonts/dejavu-serif/PTF56F-webfont.woff') format('woff'),
+         url('../res/fonts/dejavu-serif/PTF56F-webfont.ttf') format('truetype'),
+         url('../res/fonts/dejavu-serif/PTF56F-webfont.svg#PTSerifItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PTSerifRegular';
+    src: url('../res/fonts/dejavu-serif/PTF75F-webfont.eot');
+    src: url('../res/fonts/dejavu-serif/PTF75F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../res/fonts/dejavu-serif/PTF75F-webfont.woff') format('woff'),
+         url('../res/fonts/dejavu-serif/PTF75F-webfont.ttf') format('truetype'),
+         url('../res/fonts/dejavu-serif/PTF75F-webfont.svg#PTSerifBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PTSerifRegular';
+    src: url('../res/fonts/dejavu-serif/PTF76F-webfont.eot');
+    src: url('../res/fonts/dejavu-serif/PTF76F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../res/fonts/dejavu-serif/PTF76F-webfont.woff') format('woff'),
+         url('../res/fonts/dejavu-serif/PTF76F-webfont.ttf') format('truetype'),
+         url('../res/fonts/dejavu-serif/PTF76F-webfont.svg#PTSerifBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
 }
